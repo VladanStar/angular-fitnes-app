@@ -7,7 +7,7 @@
 
 
 <section>
-<form fxLayout="column" fxLayoutAlign.lg="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form fxLayout="column" fxLayoutAlign.lg="center center" #f="ngForm" fxLayoutGap="10px" (ngSubmit)="onSubmit(f)">
 
 <mat-form-field>
 <input type="email" title="#" matInput placeholder="your email" ngModel name="email" #emailInput="ngModel" email required>
@@ -24,7 +24,11 @@
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-<button type="submit" mat-raised-button color="'primary">Submit</button>
+  <mat-checkbox ngModel color="primary" checked="true" name="acceptance" required>
+    I acepted All terms
+  </mat-checkbox>
+
+<button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
 </form>
 </section>
 

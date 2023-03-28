@@ -19,6 +19,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import{MatDatepickerModule}from"@angular/material/datepicker";
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSidenavModule } from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +44,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
 MatDatepickerModule,
 MatNativeDateModule,
+MatCheckboxModule,
+MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
