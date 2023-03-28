@@ -8,11 +8,21 @@
 
 <section>
 <form fxLayout="column" fxLayoutAlign.lg="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
 <mat-form-field>
-<input type="email" title="#" matInput placeholder="your email" ngModel name="email">
+<input type="email" title="#" matInput placeholder="your email" ngModel name="email" #emailInput="ngModel" email required>
+<mat-error *ngIf="emailInput.hasError('required')">Polje mora biti popunjeno</mat-error>
+<mat-error *ngIf="!emailInput.hasError('required')">Mora biti validan email</mat-error>
 </mat-form-field>
-<mat-form-field>
-  <input type="password" title="#" matInput placeholder="your password" mgModel name="password">
+
+<mat-form-field hintLabel="Minimum 6 karaktera">
+  <input type="password" title="#" matInput placeholder="your password" ngModel name="password" required minlength="6" #passInput="ngModel">
+<mat-hint>{{passInput.value?.length}}</mat-hint>
+  </mat-form-field>
+  <mat-form-field>
+    <input  title="#" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 <button type="submit" mat-raised-button color="'primary">Submit</button>
 </form>
