@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
 
-onSubmit(f:any){
+onSubmit(form:NgForm){
+console.log(form)
 
 }
 }
