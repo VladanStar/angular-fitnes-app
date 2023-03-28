@@ -10,6 +10,7 @@ import { TrainingComponent } from './components/training/training.component';
 import { PreviousTrainingComponent } from './components/training/previous-training/previous-training.component';
 import { CurrentTrainingComponent } from './components/training/current-training/current-training.component';
 import { NewTrainingComponent } from './components/training/new-training/new-training.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NewTrainingComponent } from './components/training/new-training/new-tra
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
