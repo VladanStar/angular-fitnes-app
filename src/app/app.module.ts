@@ -11,11 +11,12 @@ import { PreviousTrainingComponent } from './components/training/previous-traini
 import { CurrentTrainingComponent } from './components/training/current-training/current-training.component';
 import { NewTrainingComponent } from './components/training/new-training/new-training.component';
 import { MaterialModule } from './material.module';
-import{BrowserAnimationsModule}from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,19 +27,20 @@ import { MatInputModule } from '@angular/material/input';
     TrainingComponent,
     PreviousTrainingComponent,
     CurrentTrainingComponent,
-    NewTrainingComponent
+    NewTrainingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-MaterialModule,
-BrowserAnimationsModule,
-MatIconModule,
-FlexLayoutModule,
-MatFormFieldModule,
-MatInputModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    FormsModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

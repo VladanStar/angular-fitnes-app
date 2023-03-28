@@ -7,12 +7,12 @@
 
 
 <section>
-<form fxLayout="column" fxLayoutAlign.lg="center center">
+<form fxLayout="column" fxLayoutAlign.lg="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
 <mat-form-field>
-<input type="email" title="#" matInput placeholder="your email">
+<input type="email" title="#" matInput placeholder="your email" ngModel name="email">
 </mat-form-field>
 <mat-form-field>
-  <input type="password" title="#" matInput placeholder="your password">
+  <input type="password" title="#" matInput placeholder="your password" name="password">
   </mat-form-field>
 <button type="submit" mat-raised-button color="'primary">Submit</button>
 </form>
