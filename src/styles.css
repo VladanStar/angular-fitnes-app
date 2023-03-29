@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+mat-sidenav-content,mat-sidenav-container,mat-sidenav {
+height: 100vh;
+
+}
+mat-sidenav{
+width: 250px;
+}
+html, body{
+height: 100vh;
+font-family: 'Ubuntu', sans-serif;
+}
+

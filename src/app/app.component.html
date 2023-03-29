@@ -3,9 +3,29 @@
 <p> Sidenav</p>
   </mat-sidenav>
   <mat-sidenav-content>
-<button (click)="sidenav.toggle()"> Show sidenav</button>
+
+<mat-toolbar color="primary">
+  <div><button (click)="sidenav.toggle()">Toggle Sidenav</button>
+  <mat-icon>menu</mat-icon>
+</div>
+  <div>logo</div>
+  <div>
+<a routerLink="/signup">SignUp</a>
+<a routerLink="/login">Login</a>
+<a routerLink="/training">Training</a>
+</div>
+
+  </mat-toolbar>
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-sidenav-content> --> </mat-sidenav-container>
 
+<!-- <mat-sidenav-container>
+<mat-toolbar color="primary">
+<div><button (click)="sidenav.toggle()">Toggle Sidenav</button></div>
+<div>logo</div>
+<div>
 
+</div>
+
+</mat-toolbar>
+</mat-sidenav-container> -->

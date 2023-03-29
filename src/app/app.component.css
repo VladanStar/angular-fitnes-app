@@ -18,4 +18,10 @@ align-items: center;
 #child3 {
   background-color: green;
 }
-
+a{
+color: white;
+text-decoration: none;
+}
+a:hover,a:active{
+color: lightgrey;
+}
